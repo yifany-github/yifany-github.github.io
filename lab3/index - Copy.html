@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+    <link href="styles/test.css" rel="stylesheet" type="text/css">
+      <title>SmallStore Online Shopping</title>
+  </head>
+
+<style>
+
+</style>
+</head>
+<body>
+  <div class="storeName">
+    <h1 id="Zoom">Welcom to<span style="color: orange"> Small</span><span style="color: green">Store</span> Online Shopping</h1>
+</div>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a class="tablinks" href="#about" onclick="openInfo(event, 'Client')">My store</a>
+  <a href="#contact">Contact</a>
+  <div class="cart">
+    <a class="tablinks" href="#cart" onclick="openInfo(event, 'Cart')">Cart</a>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Categories
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Vegetables</a>
+      <a href="#">Fruits</a>
+      <a href="#">Drinks</a>
+      <a href="#">Kitchen</a>
+    </div>
+  </div>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  
+</div>
+
+<div id="Client" class="tabcontent">
+  <h3  id="h333">Set your personal catagory</h3>
+  <p>Tell us a bit about you.</p>
+	Choose a Category:
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="NutFree">NutFree</option>
+        <option value="DairyFree">DairyFree</option>
+        <option value="Organic">Organic</option>
+        <option value="None">None</option>
+	</select>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3 id="h333">Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3  id="h333">Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>

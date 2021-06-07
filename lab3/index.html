@@ -2,10 +2,20 @@
 <html>
 <head>
 	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
     <title>SmallStore Online Shopping</title>
 </head>
 
+<style>
+  body
+{
+	background-image:url(images/bg3.jpg);
+	background-repeat:no-repeat;
+	background-position:right top;
+	margin-right:0px;
+}
+</style>
 <body>
 
 <div class="storeName">
@@ -13,15 +23,24 @@
 </div>
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Home')">Home</button>
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Your Info</button>
   <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Accessibility')">Accessibility</button>
   <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
- <button class="tablinks" onclick="openInfo(event, 'Accessibility')">Accessibility</button>
+  <div class="topnav">
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
 </div>
 
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
-  <h3  id="h333">Client Information</h3>
+  <h3  id="h333">Personal Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Category:
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
@@ -29,17 +48,20 @@
 	<option value="NutFree">NutFree</option>
         <option value="DairyFree">DairyFree</option>
         <option value="Organic">Organic</option>
-        <option value="None">None</option>
+        <option value="Vegetable">Vegetables</option>
+        <option value="Fruit">Fruits</option>
+        <option value="Daily">Daily Use</option>
+        <option value="None">All</option>
 	</select>
 </div>
 
 <div id="Products" class="tabcontent">
-  <h3 id="h333">Your targeted products</h3>
+  <h3 id="h333">Your selected products</h3>
   <p>We preselected products based on your restrictions.</p>
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
+		Add to cart
 	</button>
 </div>
 
@@ -50,7 +72,7 @@
 </div>
 
 <div id="Accessibility" class="tabcontent">
-    <h1 id="Zoom">Incease font</h1>
+    <h1 id="Zoom">Zoom in</h1>
     <button id="bigger" type="button" class="fontSet" onclick="biggerFont()">Confirm</button>
 </div>
 

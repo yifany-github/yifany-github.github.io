@@ -8,6 +8,9 @@ var products = [
 		nutFree: true,
 		dairyFree: true,
 		organic: true,
+		vagetable: true,
+		fruit: false,
+		daily: false,
 		price: 1.99
 	},
 	{
@@ -15,6 +18,9 @@ var products = [
 		nutFree: true,
 		dairyFree: true,
 		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: false,
 		price: 2.35
 	},
 	{
@@ -22,6 +28,9 @@ var products = [
 		nutFree: true,
 		dairyFree: true,
 		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: false,
 		price: 10.00
 	},
 	{
@@ -29,6 +38,9 @@ var products = [
 		nutFree: true,
 		dairyFree: true,
 		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: false,
 		price: 12.89
 	},
 	{
@@ -36,6 +48,9 @@ var products = [
 		nutFree: true,
 		dairyFree: false,
 		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: false,
 		price: 8.99
 	},
 	{
@@ -43,6 +58,9 @@ var products = [
 		nutFree: true,
 		dairyFree: false,
 		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: false,
 		price: 3.59
 	},
 	{
@@ -50,6 +68,9 @@ var products = [
 		nutFree: true,
 		dairyFree: true,
 		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: false,
 		price: 2.59
 	},
 	{
@@ -57,6 +78,9 @@ var products = [
 		nutFree: true,
 		dairyFree: true,
 		organic: true,
+		vagetable: true,
+		fruit: false,
+		daily: false,
 		price: 2.99
 	},
 	{
@@ -64,6 +88,9 @@ var products = [
 		nutFree: true,
 		dairyFree: true,
 		organic: false,
+		vagetable: true,
+		fruit: false,
+		daily: false,
 		price: 3.99
 	},
 	{
@@ -71,6 +98,9 @@ var products = [
 		nutFree: false,
 		dairyFree: false,
 		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: false,
 		price: 7.99
 	},
 	{
@@ -78,7 +108,64 @@ var products = [
 		nutFree: false,
 		dairyFree: true,
 		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: false,
 		price: 3.00
+	},
+
+	{
+		name: "apple",
+		nutFree: true,
+		dairyFree: true,
+		organic: false,
+		vagetable: false,
+		fruit: true,
+		daily: false,
+		price: 5.00
+	},
+
+	{
+		name: "banana",
+		nutFree: true,
+		dairyFree: true,
+		organic: false,
+		vagetable: false,
+		fruit: true,
+		daily: false,
+		price: 2.00
+	},
+
+	{
+		name: "watermelon",
+		nutFree: true,
+		dairyFree: true,
+		organic: false,
+		vagetable: false,
+		fruit: true,
+		daily: false,
+		price: 26.00
+	},
+
+	{
+		name: "toilet paper",
+		nutFree: false,
+		dairyFree: false,
+		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: true,
+		price: 100.00
+	},
+	{
+		name: "sanitizer",
+		nutFree: false,
+		dairyFree: false,
+		organic: false,
+		vagetable: false,
+		fruit: false,
+		daily: true,
+		price: 1000.00
 	}
 ];
 	
@@ -99,6 +186,15 @@ function restrictListProducts(prods, restriction) {
 			product_names.push(prods[i].name+"---$"+prods[i].price);
 			product_price.push(prods[i].price);
 		}else if((restriction == "Organic") && (prods[i].organic == true)){
+			product_names.push(prods[i].name+"---$"+prods[i].price);
+			product_price.push(prods[i].price);
+		}else if((restriction == "Vegetable") && (prods[i].vagetable == true)){
+			product_names.push(prods[i].name+"---$"+prods[i].price);
+			product_price.push(prods[i].price);
+		}else if((restriction == "Fruit") && (prods[i].fruit == true)){
+			product_names.push(prods[i].name+"---$"+prods[i].price);
+			product_price.push(prods[i].price);
+		}else if((restriction == "Daily") && (prods[i].daily == true)){
 			product_names.push(prods[i].name+"---$"+prods[i].price);
 			product_price.push(prods[i].price);
 		}
