@@ -19,7 +19,7 @@ function validatePhone(txtPhone) {
 }
 
 function popBox() {
-    alert("Successful! See you sonn, stay safe!");
+    alert("Successful! See you soon, stay safe!");
     window.location = "index.html"
 };
 
