@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>XBrand-----Design your style</title>
+    <link rel="icon" href="https://img.icons8.com/plumpy/96/000000/x.png" type="image">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/materialize-stepper@2.1.4/materialize-stepper.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    <form action="#">
+        <p>
+            <label>
+                <input name="group1" type="radio" checked />
+                <span>All</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="group1" type="radio" />
+                <span>Apple</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input class="with-gap" name="group1" type="radio"  />
+                <span>Samsung</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="group1" type="radio" disabled="disabled" />
+                <span>Sony</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="group1" type="radio" disabled="disabled" />
+                <span>Microsoft</span>
+            </label>
+        </p>
+    </form>
+</ul>
+<div class="navbar-fixed" id="Home">
+
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#Home" class="brand-logo" style="color:black; font-weight:bold"><img src="https://img.icons8.com/plumpy/96/000000/x.png" width="70" height="70" align="center">XBrand</a>
+
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#Browse"><img src="https://img.icons8.com/android/96/000000/foil-space-blanket.png" width="25" height="40" align="center"/> Skins</a></li>
+            <li><a href="#Browse"><img src="https://img.icons8.com/windows/96/000000/phone-case.png" width="30" height="30" align="center"/>Case</a></li>
+            <li><a href="#Browse"><img src="https://img.icons8.com/ios-glyphs/90/000000/paste-special.png" width="30" height="30" align="center"/>Special </a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons right"></i><img src="https://img.icons8.com/plumpy/96/000000/sorting-answers.png" width="30" height="30" align="center"> Category</a></li>
+            <li><a href="#Cart"><img src="https://img.icons8.com/material-outlined/192/000000/shopping-cart--v2.png" width="30" height="30" align="center"/> Cart </a></li>
+        </ul>
+    </div>
+</nav>
+</div>
+<!-- Recommendation -->
+<h1 align="center" style="font-weight: bold">Recommendation</h1>
+<div class="carousel carousel-slider">
+    <div class="carousel-fixed-item center">
+        <a class="btn waves-effect black grey-text darken-text-2" href="#Browse">Select Yours</a>
+    </div>
+    <a class="carousel-item" href="#one!"><img src="images/1.1.PNG"></a>
+    <a class="carousel-item" href="#two!"><img src="images/1.2.PNG"></a>
+    <a class="carousel-item" href="#three!"><img src="images/1.3.PNG"></a>
+    <a class="carousel-item" href="#four!"><img src="images/1.4.PNG"></a>
+
+</div>
+
+<!-- On Sale -->
+<h1 align="center" style="font-weight: bold">On Sale</h1>
+<div class="container marketing">
+
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card" >
+                <div class="card-image">
+                    <img src="images/1.png" width="200" height="300" >
+                    <span class="card-title red ">$9.99 </span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                </div>
+                <div class="card-content">
+                    <p>iPhone 12 Red Icons </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/2.png" height="300">
+                    <span class="card-title red">$9.99</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                </div>
+                <div class="card-content">
+                    <p>Samsung S21 Black Icons </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/3.png" height="300">
+                    <span class="card-title red">$23.99</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                </div>
+                <div class="card-content">
+                    <p>iPhone 12 Robot </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/4.png" height="300">
+                    <span class="card-title red">$17.99</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                </div>
+                <div class="card-content">
+                    <p>iPhone 12 Special Case</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+<h1 id="Browse" style="font-weight: bold">Browse</h1>
+
+    <div class="row">
+        <div class="input-field col s3">
+        <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Skins</option>
+            <option value="2">Cases</option>
+            <option value="3">All</option>
+        </select>
+        <label style="color: black; font-weight: bold;font-size: larger">Skin/Case</label>
+        </div>
+        <div class="input-field col s3">
+            <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Apple</option>
+                <option value="2">Samsung</option>
+                <option value="3">Sony</option>
+                <option value="4">Microsoft</option>
+                <option value="5">All</option>
+            </select>
+            <label style="color: black; font-weight: bold;font-size: larger">Brand</label>
+        </div>
+        <div class="input-field col s3">
+            <select>
+                <option value="" disabled selected>Choose your option</option>
+            </select>
+            <label style="color: black; font-weight: bold;font-size: larger">Model</label>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col m3">
+            <div class="card">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/4.png" height="300">
+                        <span class="card-title red">$17.99</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>iPhone 12 Special Case</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h1 id="Cust" style="font-weight: bold">Made Yours</h1>
+<div>
+    <div class="row">
+        <div class="col m3">
+            <div class="card">
+                <div class="card">
+                    <div class="card-image">
+                        <img id="blah" src="http://placehold.it/250" alt="your image" />
+                        <span class="card-title red">$29.99</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>iPhone 12 Customized Skin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m3">
+            <div class="card">
+                <div class="card">
+                    <div class="card-image">
+                        <img id="blah1" src="http://placehold.it/250" alt="your image" />
+                        <span class="card-title red">$32.99</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>iPhone 12 Customized Case</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type='file' onchange="readURL(this); " accept="image/*"/>
+    <button class="waves-effect waves-dark btn black" >Add to Cart </button>
+    <a>*Customization is only for iPhone 12 currently.</a>
+
+
+
+</div>
+
+<h1 id="Cart" style="font-weight: bold">Cart</h1>
+<div>
+    <form>
+        <ul class="stepper parallel horizontal">
+            <li class="step active">
+                <div class="step-title waves-effect waves-dark">Cart items</div>
+                <div class="step-content">
+                    <div class="row">
+                        <div class='form-field col s12'>
+                            <p>Step with custom validation</p>
+                            <span>For this step we want to have a custom validator that checks if if at least one checkbox is checked</span>
+
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="waves-effect waves-dark btn next-step black" data-validator="validateStepOne">CONTINUE</button>
+                    </div>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step-title waves-effect waves-dark">Address</div>
+                <div class="step-content">
+                    <div class="row">
+                        <div class='form-field col s12'>
+                            <p>Step with no custom validation</p>
+                            <div class="input-field col s12">
+                                <input type="text" name="textfield" class="required validate"/>
+                                <label for="textfield">Random textfield</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="waves-effect waves-dark btn next-step black">CONTINUE</button>
+                        <button class="waves-effect waves-dark btn-flat previous-step ">BACK</button>
+                    </div>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step-title waves-effect waves-dark">Payment</div>
+                <div class="step-content">
+                    <div class="row">
+                        <div class='form-field'>
+                            <p>Step with feedback and custom validation</p>
+                            <p>
+                                <input name='checkbox3' type="checkbox" class="filled-in"
+                                       id="checkbox3" value='checkbox3'/>
+                                <label for="checkbox3">Checkbox 3</label>
+                            </p>
+                            <p>
+                                <input name='checkbox4' type="checkbox" class="filled-in"
+                                       id="checkbox4" value='checkbox4'/>
+                                <label for="checkbox4">Checkbox 4</label>
+                            </p>
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="text" id="textfield2" name="textfield2" class="required validate"/>
+                            <label for="textfield2">This field should contain the word materialize</label>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="waves-effect waves-dark btn next-step black" data-feedback="nextStepThreeHandler" data-validator="validateStepThree">SUBMIT</button>
+                        <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
+                    </div>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step-title waves-effect waves-dark">Review</div>
+                <div class="step-content">
+                    <div class="row">
+                        <div class='form-field'>
+                            <p>Submit phase</p>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="waves-effect waves-dark btn next-step black" data-feedback="nextStepThreeHandler" >Finished</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </form>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<script src="js/mstepper.js"></script>
+<script>
+    $(document).ready(function(){
+        //Initialize dropdown
+        $(".dropdown-trigger").dropdown();
+
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            indicators: true
+        });
+        $(window).scroll(function(){
+            if($(window).scrollTop()>150){
+                $('nav').addClass('sticky-nav');
+            }
+        });
+        $('select').formSelect();
+    });
+</script>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result);
+                $('#blah1')
+                    .attr('src', e.target.result);
+            };
+
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+</body>
+</html>
