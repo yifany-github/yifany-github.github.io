@@ -28,15 +28,15 @@ class Timer extends React.Component {
 }
 
 ReactDOM.render(
-    <Timer />,
-    document.getElementById('timer-example')
+    <Notice />,
+    document.getElementById('Notice')
 );
 class MarkdownEditor extends React.Component {
     constructor(props) {
         super(props);
         this.md = new Remarkable();
         this.handleChange = this.handleChange.bind(this);
-        this.state = { value: 'Hello, **world**!' };
+        this.state = { value: 'You should put correct information.' };
     }
 
     handleChange(e) {
