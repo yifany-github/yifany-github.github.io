@@ -18,52 +18,20 @@
 
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
-    <form action="#">
-        <p>
-            <label>
-                <input name="group1" type="radio" checked />
-                <span>All</span>
-            </label>
-        </p>
-        <p>
-            <label>
-                <input name="group1" type="radio" />
-                <span>Apple</span>
-            </label>
-        </p>
-        <p>
-            <label>
-                <input class="with-gap" name="group1" type="radio"  />
-                <span>Samsung</span>
-            </label>
-        </p>
-        <p>
-            <label>
-                <input name="group1" type="radio" disabled="disabled" />
-                <span>Sony</span>
-            </label>
-        </p>
-        <p>
-            <label>
-                <input name="group1" type="radio" disabled="disabled" />
-                <span>Microsoft</span>
-            </label>
-        </p>
-    </form>
+
 </ul>
 <div class="navbar-fixed" id="Home">
-
 
 <nav>
     <div class="nav-wrapper">
         <a href="#Home" class="brand-logo" style="color:black; font-weight:bold"><img src="https://img.icons8.com/plumpy/96/000000/x.png" width="70" height="70" align="center">XBrand</a>
 
         <ul class="right hide-on-med-and-down">
-            <li><a href="#Browse"><img src="https://img.icons8.com/android/96/000000/foil-space-blanket.png" width="25" height="40" align="center"/> Skins</a></li>
-            <li><a href="#Browse"><img src="https://img.icons8.com/windows/96/000000/phone-case.png" width="30" height="30" align="center"/>Case</a></li>
-            <li><a href="#Browse"><img src="https://img.icons8.com/ios-glyphs/90/000000/paste-special.png" width="30" height="30" align="center"/>Special </a></li>
+            <li><a href="#Browse" id="skin" onclick="setList(this.id)"><img src="https://img.icons8.com/android/96/000000/foil-space-blanket.png" width="25" height="40" align="center"/> Skins</a></li>
+            <li><a href="#Browse" id="case" onclick="setList(this.id)" ><img src="https://img.icons8.com/windows/96/000000/phone-case.png" width="30" height="30" align="center"/>Case</a></li>
+            <li><a href="#Browse" id="special" onclick="setList(this.id)"><img src="https://img.icons8.com/ios-glyphs/90/000000/paste-special.png" width="30" height="30" align="center"/>Special </a></li>
             <!-- Dropdown Trigger -->
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons right"></i><img src="https://img.icons8.com/plumpy/96/000000/sorting-answers.png" width="30" height="30" align="center"> Category</a></li>
+            <li><a class="dropdown-trigger" href="#Browse" data-target="dropdown1"><i class="material-icons right"></i><img src="https://img.icons8.com/plumpy/96/000000/sorting-answers.png" width="30" height="30" align="center"> Category</a></li>
             <li><a href="#Cart"><img src="https://img.icons8.com/material-outlined/192/000000/shopping-cart--v2.png" width="30" height="30" align="center"/> Cart </a></li>
         </ul>
     </div>
@@ -90,9 +58,9 @@
         <div class="col s12 m6">
             <div class="card" >
                 <div class="card-image">
-                    <img src="images/1.png" width="200" height="300" >
-                    <span class="card-title red ">$9.99 </span>
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    <img src="images/redIcons.png" width="200" height="300" >
+                    <span class="card-title red ">$9.00 </span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons" id="redIcons" onclick="addToCart(this.id)">add</i></a>
                 </div>
                 <div class="card-content">
                     <p>iPhone 12 Red Icons </p>
@@ -103,9 +71,9 @@
         <div class="col s12 m6">
             <div class="card">
                 <div class="card-image">
-                    <img src="images/2.png" height="300">
-                    <span class="card-title red">$9.99</span>
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    <img src="images/blackIcons.png" height="300">
+                    <span class="card-title red">$9.00</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons" id="blackIcons" onclick="addToCart(this.id)">add</i></a>
                 </div>
                 <div class="card-content">
                     <p>Samsung S21 Black Icons </p>
@@ -116,9 +84,9 @@
         <div class="col s12 m6">
             <div class="card">
                 <div class="card-image">
-                    <img src="images/3.png" height="300">
-                    <span class="card-title red">$23.99</span>
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    <img src="images/robot.png" height="300">
+                    <span class="card-title red">$23.00</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons" id="robot" onclick="addToCart(this.id)">add</i></a>
                 </div>
                 <div class="card-content">
                     <p>iPhone 12 Robot </p>
@@ -128,9 +96,9 @@
         <div class="col s12 m6">
             <div class="card">
                 <div class="card-image">
-                    <img src="images/4.png" height="300">
-                    <span class="card-title red">$17.99</span>
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    <img src="images/12Special.png" height="300">
+                    <span class="card-title red">$17.00</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons" id="12Special" onclick="addToCart(this.id)">add</i></a>
                 </div>
                 <div class="card-content">
                     <p>iPhone 12 Special Case</p>
@@ -145,18 +113,17 @@
 
     <div class="row">
         <div class="input-field col s3">
-        <select>
-            <option value="" disabled selected>Choose your option</option>
+        <select id="skin/case" onchange="updateCatalogModel(this.id)" >
             <option value="1">Skins</option>
             <option value="2">Cases</option>
-            <option value="3">All</option>
+            <option value="3" selected>All</option>
         </select>
         <label style="color: black; font-weight: bold;font-size: larger">Skin/Case</label>
         </div>
         <div class="input-field col s3">
-            <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Apple</option>
+            <select id="brand" onchange="updateCatalogModel(this.id)">
+                <option value="0" disabled selected>Choose your option</option>
+                <option value="1" >Apple</option>
                 <option value="2">Samsung</option>
                 <option value="3">Sony</option>
                 <option value="4">Microsoft</option>
@@ -164,30 +131,12 @@
             </select>
             <label style="color: black; font-weight: bold;font-size: larger">Brand</label>
         </div>
-        <div class="input-field col s3">
-            <select>
-                <option value="" disabled selected>Choose your option</option>
-            </select>
-            <label style="color: black; font-weight: bold;font-size: larger">Model</label>
-        </div>
     </div>
 
+    <div id="show"></div>
 
-    <div class="row">
-        <div class="col m3">
-            <div class="card">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/4.png" height="300">
-                        <span class="card-title red">$17.99</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                    </div>
-                    <div class="card-content">
-                        <p>iPhone 12 Special Case</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="row" id="catalog">
+
     </div>
 </div>
 
@@ -200,8 +149,8 @@
                 <div class="card">
                     <div class="card-image">
                         <img id="blah" src="http://placehold.it/250" alt="your image" />
-                        <span class="card-title red">$29.99</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                        <span class="card-title red">$29.00</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons" id="cSkin" onclick="addToCart(this.id)">add</i></a>
                     </div>
                     <div class="card-content">
                         <p>iPhone 12 Customized Skin</p>
@@ -214,8 +163,8 @@
                 <div class="card">
                     <div class="card-image">
                         <img id="blah1" src="http://placehold.it/250" alt="your image" />
-                        <span class="card-title red">$32.99</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                        <span class="card-title red">$32.00</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons" id="cCase" onclick="addToCart(this.id)">add</i></a>
                     </div>
                     <div class="card-content">
                         <p>iPhone 12 Customized Case</p>
@@ -225,7 +174,6 @@
         </div>
     </div>
     <input type='file' onchange="readURL(this); " accept="image/*"/>
-    <button class="waves-effect waves-dark btn black" >Add to Cart </button>
     <a>*Customization is only for iPhone 12 currently.</a>
 
 
@@ -240,15 +188,38 @@
                 <div class="step-title waves-effect waves-dark">Cart items</div>
                 <div class="step-content">
                     <div class="row">
-                        <div class='form-field col s12'>
-                            <p>Step with custom validation</p>
-                            <span>For this step we want to have a custom validator that checks if if at least one checkbox is checked</span>
+                        <div class='form-field col s12' id="cartItems" onchange="showCart()">
+
+                            <div class="row" id="row1">
+                            </div>
+                            <div class="row">
+                                <h3>Shopping Cart</h3>
+                                <button class="waves-effect waves-dark btn next-step black " data-validator="validateStepOne">CONTINUE</button>
+
+                            </div>
+                            <div class="row" id="row2">
+                                <table   >
+                                    <thead >
+                                    <tr >
+                                        <th >#</th>
+                                        <th >Remove</th>
+                                        <th >Image</th>
+                                        <th >Name</th>
+                                        <th >Price</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tableProducts">
+
+                                    </tbody>
+                                    <tfoot id="total"  >
+
+                                    </tfoot>
+                                </table>
+                            </div>
 
                         </div>
                     </div>
-                    <div class="step-actions">
-                        <button class="waves-effect waves-dark btn next-step black" data-validator="validateStepOne">CONTINUE</button>
-                    </div>
+
                 </div>
             </li>
             <li class="step">
@@ -258,14 +229,40 @@
                         <div class='form-field col s12'>
                             <p>Step with no custom validation</p>
                             <div class="input-field col s12">
-                                <input type="text" name="textfield" class="required validate"/>
-                                <label for="textfield">Random textfield</label>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                        <label for="first_name">First Name</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="last_name" type="text" class="validate">
+                                        <label for="last_name">Last Name</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="email" type="email" class="validate">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input value="Street name" id="" type="text" class="validate">
+                                        <label class="active" style="font-weight:bold " >Street name</label>
+                                    </div>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="icon_telephone" type="tel" class="validate">
+                                    <label for="icon_telephone">Telephone</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="step-actions">
-                        <button class="waves-effect waves-dark btn next-step black">CONTINUE</button>
+                    <div >
                         <button class="waves-effect waves-dark btn-flat previous-step ">BACK</button>
+                        <button class="waves-effect waves-dark btn next-step black">CONTINUE</button>
+
                     </div>
                 </div>
             </li>
@@ -274,22 +271,12 @@
                 <div class="step-content">
                     <div class="row">
                         <div class='form-field'>
-                            <p>Step with feedback and custom validation</p>
-                            <p>
-                                <input name='checkbox3' type="checkbox" class="filled-in"
-                                       id="checkbox3" value='checkbox3'/>
-                                <label for="checkbox3">Checkbox 3</label>
-                            </p>
-                            <p>
-                                <input name='checkbox4' type="checkbox" class="filled-in"
-                                       id="checkbox4" value='checkbox4'/>
-                                <label for="checkbox4">Checkbox 4</label>
-                            </p>
+                            <p>Name on the Card: <input type="text" ></p>
+                            <p><img src="https://img.icons8.com/plasticine/100/fa314a/bank-card-back-side.png" width="25" height="25">
+                                Credit Card: <input type="text"></p>
+                            <p>Expire Date: <input type="text" ></p>
                         </div>
-                        <div class="input-field col s12">
-                            <input type="text" id="textfield2" name="textfield2" class="required validate"/>
-                            <label for="textfield2">This field should contain the word materialize</label>
-                        </div>
+
                     </div>
                     <div class="step-actions">
                         <button class="waves-effect waves-dark btn next-step black" data-feedback="nextStepThreeHandler" data-validator="validateStepThree">SUBMIT</button>
@@ -301,8 +288,8 @@
                 <div class="step-title waves-effect waves-dark">Review</div>
                 <div class="step-content">
                     <div class="row">
-                        <div class='form-field'>
-                            <p>Submit phase</p>
+                        <div >
+                        <h2>Congratulations on completing the order. You will receive your package soon!</h2>
                         </div>
                     </div>
                     <div class="step-actions">
@@ -314,11 +301,18 @@
     </form>
 
 </div>
+<div id="google_translate_element" style="position:absolute;bottom:10px;right:10px;z-index:2000;opacity:0.7"></div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
-<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
-<script src="js/mstepper.js"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/mstepper.js"></script>
+<script type="text/javascript" src="js/listAndShow.js"></script>
+<script>
+
+</script>
 <script>
     $(document).ready(function(){
         //Initialize dropdown
@@ -337,6 +331,28 @@
     });
 </script>
 <script>
+    function googleTranslateElementInit() {
+
+        new google.translate.TranslateElement(
+            {
+                //这个参数不起作用，看文章底部更新，翻译面板的语言
+                //pageLanguage: 'zh-CN',
+                //这个是你需要翻译的语言，比如你只需要翻译成越南和英语，这里就只写en,vi
+                includedLanguages: 'en,zh-CN,hr,cs,da,nl,fr,de,el,iw,hu,ga,it,ja,ko,pt,ro,ru,sr,es,th,vi',
+                //选择语言的样式，这个是面板，还有下拉框的样式，具体的记不到了，找不到api~~
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                //自动显示翻译横幅，就是翻译后顶部出现的那个，有点丑，这个属性没有用的话，请看文章底部的其他方法
+                autoDisplay: true,
+                //还有些其他参数，由于原插件不再维护，找不到详细api了，将就了，实在不行直接上dom操作
+            },
+            'google_translate_element'//触发按钮的id
+        );
+
+    }
+</script>
+<script src="https://translate.google.cn/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -354,4 +370,28 @@
     }
 </script>
 </body>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">XBrand</h5>
+                <p class="grey-text text-lighten-4">Style your devices.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contact Us</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">192 Water Avenue, Ottawa</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">1-888-300-400</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2021 Copyright
+            <a class="grey-text text-lighten-4 right" href="#!">Design by AtakePanda</a>
+        </div>
+    </div>
+
+</footer>
 </html>

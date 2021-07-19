@@ -2162,7 +2162,9 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
-
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   margin: 0;
 }
 
@@ -2197,6 +2199,7 @@ figcaption,
 figure,
 main {
   /* 1 */
+  flex: 1 0 auto;
   display: block;
 }
 
@@ -2947,7 +2950,7 @@ ul.staggered-list li {
 .page-footer {
   padding-top: 20px;
   color: #fff;
-  background-color: #ee6e73;
+  background-color: grey;
 }
 
 .page-footer .footer-copyright {
