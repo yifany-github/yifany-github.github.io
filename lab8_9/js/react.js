@@ -1,65 +1,100 @@
-class Timer extends React.Component {
+userPhoneChange = (e) => {
+    const { value } = e.target;
+    const reg = /^1([0-9]*)?$/;
+    if ((reg.test(value) && value.length < 9) || value === '') {
+        this.setState({
+            userPhone: value
+        })
+    }
+}
+class LocationSearchInput extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { seconds: 0 };
+        this.state = { address: '' };
     }
 
-    tick() {
-        this.setState(state => ({
-            seconds: state.seconds + 1
-        }));
-    }
+    handleChange = address => {
+        this.setState({ address });
+    };
 
-    componentDidMount() {
-        this.interval = setInterval(() => this.tick(), 1000);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.interval);
-    }
+    handleSelect = address => {
+        geocodeByAddress(address)
+            .then(results => getLatLng(results[0]))
+            .then(latLng => console.log('Success', latLng))
+            .catch(error => console.error('Error', error));
+    };
 
     render() {
         return (
-            <div>
-                Seconds: {this.state.seconds}
+            <PlacesAutocomplete
+                value={this.state.address}
+                onChange={this.handleChange}
+                onSelect={this.handleSelect}
+            >
+                {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                    <div>
+                        <input
+                            {...getInputProps({
+                                placeholder: 'Search Places ...',
+                                className: 'location-search-input',
+                            })}
+                        />
+                        <div className="autocomplete-dropdown-container">
+                            {loading && <div>Loading...</div>}
+                            {suggestions.map(suggestion => {
+                                const className = suggestion.active
+                                    ? 'suggestion-item--active'
+                                    : 'suggestion-item';
+                                // inline style for demonstration purpose
+                                const style = suggestion.active
+                                    ? { backgroundColor: '#fafafa', cursor: 'pointer' }
+                                    : { backgroundColor: '#ffffff', cursor: 'pointer' };
+                                return (
+                                    <div
+                                        {...getSuggestionItemProps(suggestion, {
+                                            className,
+                                            style,
+                                        })}
+                                    >
+                                        <span>{suggestion.description}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
+            </PlacesAutocomplete>
+        );
+    }
+}
+class AddressItem extends Component {
+    render() {
+        return (
+            <div className="row form-group justify-content-start">
+                <label className="col-sm-4 col-form-label">{this.props.label}</label>
+                <div className="col-xl-8">
+                    <input
+                        type="text"
+                        defaultValue={this.props.value}
+                        onChange={this.props.onChange}
+                        className="form-control"
+                        placeholder={this.props.placeholder} />
+                </div>
             </div>
         );
     }
 }
 
-ReactDOM.render(
-    <Notice />,
-    document.getElementById('Notice')
-);
-class MarkdownEditor extends React.Component {
-    constructor(props) {
-        super(props);
-        this.md = new Remarkable();
-        this.handleChange = this.handleChange.bind(this);
-        this.state = { value: 'You should put correct information.' };
-    }
-
-    handleChange(e) {
-        this.setState({ value: e.target.value });
-    }
-
-    getRawMarkup() {
-        return { __html: this.md.render(this.state.value) };
-    }
-    s
-    class Square extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: null,
-        };
-    }
-
+class AddressInput extends Component {
     render() {
         return (
-            <button className="square" onClick={() => alert('click')}>
-                {this.props.value}
-            </button>
+            <div className="card"><div className="card-body">
+                <AddressItem label="Street" value={this.props.street} placeholder="" readonly="true" />
+                <AddressItem label="City" value={this.props.city} placeholder="" readonly="true" />
+                <AddressItem label="State" value={this.props.state} placeholder="" readonly="true" />
+                <AddressItem label="Postal Code" value={this.props.code} placeholder="" readonly="true" />
+                <AddressItem label="Country" value={this.props.country} placeholder="" readonly="true" />
+            </div></div>
         );
     }
 }
