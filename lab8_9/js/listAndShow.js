@@ -1,3 +1,6 @@
+const domContainer = document.querySelector('#like_button_container');
+ReactDOM.render(e(LikeButton), domContainer);
+
 function updateCatalogModel(){
 
     var skin =document.getElementById("skin/case");
