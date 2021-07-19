@@ -203,7 +203,7 @@ function listCreat(name,price){
         "            <div class=\"card\">\n" +
         "                <div class=\"card\">\n" +
         "                    <div class=\"card-image\">\n" +
-        "                        <img src=\"images/"+name+".png\" height=\"300\">\n" +
+        "                        <img src=\"images/"+name+".PNG\" height=\"300\">\n" +
         "                        <span class=\"card-title red\">$"+price+"</span>\n" +
         "                        <a class=\"btn-floating halfway-fab waves-effect waves-light red\"><i class=\"material-icons\" id=\""+name+"\"onclick=\"addToCart(this.id)\">add</i></a>\n" +
         "                    </div>\n" +
@@ -531,7 +531,7 @@ function creatList(){
         str= str +"<tr><th>" +
             i+"</th>" +
             "</th><td><button class=\"waves-effect waves-light btn red darken-4\" id=\""+"R"+cartList[i].name+"\" onclick=\"remove(this.id)\">X</button></td>" +
-            "<td><img style=\"width: 5rem; height: 5rem;\" src=\"images/"+cartList[i].name+".png\"></td>" +
+            "<td><img style=\"width: 5rem; height: 5rem;\" src=\"images/"+cartList[i].name+".PNG\"></td>" +
             "<td>"+cartList[i].name+"</td>" +
             "<td>$"+cartList[i].price+"</td></tr>"
     }
