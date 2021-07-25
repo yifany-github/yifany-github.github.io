@@ -1,0 +1,50 @@
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi!
+   utter_ask_email:
+       - text: |
+           What is your email address?
+   utter_subscribed:
+       - text: |
+           Check your inbox at {email} in order to finish subscribing to the newsletter!
+       - text: |
+           You're all set! Check your inbox at {email} to confirm your subscription.
+    utter_ending:
+       - text: |
+           Bye
+       - text: |
+           Goodbye
+        - text: |
+           Stay safe, take care. Bye!
+       - text: |
+           All best, bye.
+    utter_thank:
+        - text: |
+            Happy to help you
+        - text: |
+            You're welcome
+        - text: |
+            No problem!
+        - text: |
+            All good
+    utter_unsubscribe:
+        - text: |
+           Can you tell me the reasons?
+        - text: |
+           Why are you unsubscribing?
+        - text: |
+           You can help us to improve, give us some reasons?
+        - text: |
+            Tell me some reasons. 
+    utter_empathy:
+        - text: |
+           So sad!
+        - text: |
+            We hope you will come back!
+        - text: |
+            Okay we understand.
+        - text: |
+            We will improve!
